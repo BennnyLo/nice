@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=0.6" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<style type="text/css">
+			*{
+				margin: auto;
+			}
+			a{
+				text-decoration: none;
+				vertical-align: middle;
+				text-align: center;
+			}
+			.NO1{
+				width: 100%;
+				height: 110px;
+			}
+			.N1top{
+				width: 60%;
+				height: 60px;
+			}
+			.N1bottom{
+				width: 100%;
+				height: 50px;
+				background-color: gray;
+			}
+			.N1bottom ul li{
+				float: left;
+				list-style: none;
+				width: 8%;
+				height: 50px;
+				margin: 0px 1%;
+				text-align: center;
+				list-style: none;
+				float: left;
+			}
+			.N1bottom ul li a{
+				width: 100%;
+				height: 50px;
+				line-height: 50px;
+				vertical-align: middle;
+				color: white;
+			}
+			.N1li1{
+				background-color: limegreen;
+			}
+			.selected{
+				background-color: limegreen;
+				width: 8%;
+				height: 50px;
+				margin: 0px 1%;
+				text-align: center;
+			}
+			.NO2{
+				width: 80%;
+				height: 450px;
+				background-color: darkgray;
+			}
+			.N2left{
+				width: 18.8%;
+				height: 450px;
+				float: left;
+			}
+			.N2left ul li{
+				width: 100%;
+				height: 60px;
+				list-style: none;
+				background-color: limegreen;
+			}
+			.A{
+			  visibility: hidden;
+			}
+			.B{
+				border: 1px solid white;
+			}
+			.N2left ul li a{
+				width: 100%;
+				height: 60px;
+				display: block;
+				line-height: 60px;
+				vertical-align: middle;
+				color: white;
+			}
+			.ul2{
+				width: 100%;
+				border: 1px solid white;
+				position: relative;
+				top: -60px;
+				padding: 0;
+				left: 99.5%;
+				display: none;
+			}
+			.N2center{
+				width: 60%;
+				height: 450px;
+				float: left;
+				margin: 0 auto;
+			}
+			.N2center ul li{
+				position: relative;
+				list-style: none;
+				float: left;
+				top: -25px;
+				left: 43%;
+			}
+			.N2center ul li a{
+				display: inline-block; 
+				width: 50px;
+				height: 5px;
+				background-color: gray;
+				margin-right: 5px;
+			}
+			.N2center ul li a:hover{
+				background-color: darkgray;
+			}
+			.N2center ul li a div:hover{
+				background-color: darkgray;
+			}
+			.N2right{
+				width: 21.2%;
+				height: 450px;
+				float: right;
+				margin: 0 auto;
+			}
+			.right1{
+				width: 90%;
+				height: 160px;
+				border: 1px solid limegreen;
+				padding-top:15px;
+				margin-top: 25px;
+				margin-bottom: 18px;
+			}
+			.N2right input,.N2right a{
+				display: block;
+				width: 70%;
+				height: 30px;
+				margin-bottom: 15px;
+			}
+			.N2right input{
+				border: 1px solid gray;
+			}
+			.N2right a{
+				background-color: limegreen;
+				height: 35px;
+				line-height: 35px;
+				vertical-align: middle;
+				color: white;
+			}
+			.right2{
+                width: 80%;
+              margin-top: 40px;                
+			}
+			img{
+				width: 100%;
+			}
+			.N3{
+				clear: both;
+				width: 80%;
+				height: 200px;
+				overflow: hidden;
+				/*overflow:hidden吧div多余的元素隐藏*/
+				background-color:forestgreen;
+			}
+			.N3 ul{
+				width: 10%;
+				float: left;
+				margin-right: 4%;
+			}
+			.N3 ul li{
+				width: 95%;
+				height: 180px;
+				margin-left: 1%;
+				list-style: none;
+				position: relative;
+			}
+			.N3 ul li img{
+				width: 130%;
+				height: 160px;
+			}
+			@keyframes move{
+				from{}
+				to{transform: translate(100px,0);}
+			}
+			.C{
+				animation:move 1s ease-in 0.5s infinite alternate;
+			}
+			.l2{
+				display: none;
+				position:relative;
+				top: -180px;
+                line-height: 180px;				
+                vertical-align: middle;
+                text-align: center;
+			}
+			.NO3{
+				width: 80%;
+				height: 700px;
+			}
+			.NO3 img{
+				width:90%;
+			}
+			.NO3left{
+				width: 25%;
+				height: 600px;
+				float: left;
+				text-align: right;
+			}
+			ul{
+				padding: 0;
+			}
+			.NO3left ul li,.NO3right ul li{
+				list-style: none;
+				width: 100%;
+				height: 300px;
+				vertical-align: middle;
+			}
+			.NO3left a,.NO3right a{
+				display: block;
+				width: 100%;
+			}
+			.NO3left a img,.NO3right a img{
+				width: 20%;
+			}
+			.NO3center{
+				width: 50%;
+				height: 600px;
+				float: left;
+				text-align: center;
+			}
+			.NO3right{
+				float: left;
+				width: 25%;
+				height: 600px;
+				text-align: left;
+			}
+			.NO3RL1{
+				position: relative;
+				top: 150px;
+			}
+			.NO4{
+				width: 60%;
+				height: 300px;
+			}
+			.N4top{
+				width: 50%;
+				height: 80px;
+			}
+			.N4top ul li{
+				width: 30%;
+				height: 40px;
+				list-style: none;
+				float: left;
+				margin-left: 3%;
+			}
+			.N4top ul li a{
+				display: block;
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				vertical-align: middle;
+				border-radius:25px;
+				border: 1px solid limegreen;
+			}
+			.N4top ul li a{
+				color: white;
+				background-color: limegreen;
+			}
+			.N4top ul li a:hover{
+				color: limegreen;
+				background-color: white;
+			}
+			.N4bottom{
+				width: 100%;
+				height: 200px;
+				overflow: hidden;
+				border-radius:15px ;
+				border: 1px solid limegreen;
+			}
+			.N4bottom ul li{
+				list-style: none;
+			}
+			.N4li ul li{
+				width: 22%;
+				float: left;
+				margin-left: 2.5%;
+			}
+			@keyframes big{
+				from{}
+				to{transform: scale(1.2);}
+			}
+			.N4li ul li img:hover{
+				animation: big 1s ease-out 0.1s 1 normal;
+			}
+			.NO5{
+				width: 100%;
+				height: 200px;
+				background-color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="NO1">
+			<div class="N1top">
+				<h1 style="font-family:'微软雅黑';color: limegreen;display: inline;margin-right: 20%;">Vegetables&nbsp;&nbsp;Fruits&nbsp;&nbsp;<font style="color: gray;">Design</font></h1>
+				<input type="text" id="" value=""style="width: 20%;height: 30px;border: 1px solid lightgray;color: gray;" placeholder="请输入您要搜索的产品"/>
+				<a href="#" style="display:inline-block;position:relative;top: -1px;left: -4px;width:85px;height:33px;line-height: 33px;background-color: limegreen;color: white;">搜索</a>
+			</div>
+			<div class="N1bottom">
+				<ul>
+					<li class="N1li1" style="width: 15%;margin-left: 10%;"><a id="dropdown" href="#" style="padding-right: 50%;">商城分类<a href="#" style="border: 1px solid white;padding: 0px 2%;">↑</a></a></li>
+					<li class="selected"><a href="#">首页</a></li>
+					<li><a href="#">全部产品</a></li>
+					<li><a href="#">热买推荐</a></li>
+					<li><a href="#">促销专区</a></li>
+					<li><a href="#">我要开店</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="NO2">
+			<div class="N2left">
+				<ul>
+							<li class="li1"><a href="#">蔬菜水果<div style="width: 50%;display: inline-block;"></div>></a>
+								<ul class="ul2">
+									<li><a href="#">芒果</a></li>
+									<li><a href="#">香蕉</a></li>
+									<li><a href="#">橙子</a></li>
+									<li><a href="#">草莓</a></li>
+									<li><a href="#">甘蔗</a></li>
+									<li><a href="#">太阳</a></li>
+								</ul>
+							</li>
+							<li class="li1"><a href="#">休闲食品<div style="width: 50%;display: inline-block;"></div>></a>
+								<ul class="ul2">
+									<li><a href="#">可比克</a></li>
+									<li><a href="#">呀！土豆</a></li>
+									<li><a href="#">奶砖</a></li>
+									<li><a href="#">大辣片</a></li>
+									<li><a href="#">乐吧薯条</a></li>
+								</ul>
+							</li>
+							<li class="li1"><a href="#">酒水饮料<div style="width: 50%;display: inline-block;"></div>></a>
+								<ul class="ul2">
+									<li><a href="#">果粒橙</a></li>
+									<li><a href="#">花花牛</a></li>
+									<li><a href="#">安慕希</a></li>
+									<li><a href="#">味可滋</a></li>
+									<li><a href="#">旺仔牛奶</a></li>
+								</ul>
+							</li>
+							<li class="li1"><a href="#">特色小吃<div style="width: 50%;display: inline-block;"></div>></a>
+								<ul class="ul2">
+									<li><a href="#">麻辣虾尾</a></li>
+									<li><a href="#">王婆大虾</a></li>
+									<li><a href="#">自助餐</a></li>
+									<li><a href="#">甜品</a></li>
+								</ul>
+							</li>
+							<li class="li1"><a href="#">营养保健<div style="width: 50%;display: inline-block;"></div>></a>
+								<ul class="ul2">
+									<li><a href="#">钙</a></li>
+									<li><a href="#">维生素C</a></li>
+								</ul>
+							</li>
+							<li class="li1"><a href="#">休闲娱乐<div style="width: 50%;display: inline-block;"></div>></a>
+								<ul class="ul2">
+									<li><a href="#">大摆锤</a></li>
+									<li><a href="#">过山车</a></li>
+								</ul>
+							</li>
+							<li class="li1"><a href="#">DIY美食<div style="width: 50%;display: inline-block;"></div></a>
+							</li>
+						</ul>
+			</div>
+			<div class="N2center">
+				<img src="img/1.jpg" style="width: 100%;height: 420px;"/>
+				<ul>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+				</ul>
+			</div>
+			<div class="N2right">
+				<div class="right1">
+					<input type="text" name="" id="" value="" placeholder="账号"/>
+					<input type="password" name="" id="" value="" placeholder="密码"/>
+					<a href="#">登录</a>
+				</div>
+				<div class="right2">
+					<img src="img/3.png"/>
+				</div>
+			</div>
+		</div>
+			<div class="N3">
+				<ul>
+					<li class="l1"><a href="#"><img src="img/4.jpg"/></a></li>
+					<li class="l2"><a href="#"><h1 style="">🙂</h1></a></li>
+				</ul>
+				<ul>
+					<li class="l1"><a href="#"><img src="img/5.jpg"/></a></li>
+					<li class="l2"><a href="#"><h1 style="">🙂</h1></a></li>
+				</ul>
+				<ul>
+					<li class="l1"><a href="#"><img src="img/6.jpg"/></a></li>
+					<li class="l2"><a href="#"><h1 style="">🙂</h1></a></li>
+				</ul>
+				<ul>
+					<li class="l1"><a href="#"><img src="img/7.jpg"/></a></li>
+					<li class="l2"><a href="#"><h1 style="">🙂</h1></a></li>
+				</ul>
+				<ul>
+					<li class="l1"><a href="#"><img src="img/8.jpg"/></a></li>
+					<li class="l2"><a href="#"><h1 style="">🙂</h1></a></li>
+				</ul>
+				<ul>
+					<li class="l1"><a href="#"><img src="img/9.jpg"/></a></li>
+					<li class="l2"><a href="#"><h1 style="">🙂</h1></a></li>
+				</ul>
+				<ul>
+					<li class="l1"><a href="#"><img src="img/10.jpg"/></a></li>
+					<li class="l2"><a href="#"><h1 style="">🙂</h1></a></li>
+				</ul>
+				</ul>
+			</div>
+		<div class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.6s">
+		  <div class="NO3">
+			<h1 style="color: limegreen;text-align: center;">品质安全</h1>
+			<p style="color:gray;text-align: center;">———————绿色生态———————</p><br />
+			<div class="NO3left">
+				<ul>
+					<li class="NO3RL1">
+				<a href="#"><img src="img/C.png"/><br /><p style="color: yellowgreen;">品牌理念</p></a>
+					</li>
+					<li class="NO3RL2">
+				<a href="#"><img src="img/D.png"/><br /><p style="color: orangered;">战略定位</p></a>
+					</li>
+				</ul>
+			</div>
+			<div class="NO3center"><img src="img/11.png"/></div>
+			<div class="NO3right">
+				<ul>
+					<li class="NO3RL1">
+			<a href="#"><img src="img/A.png"/><br /><p style="color: green;">安检中心</p></a>
+					</li>
+					<li class="NO3RL2">
+			<a href="#"><img src="img/B.png"/><br /><p style="color: gray;">品牌服务</p></a>
+					</li>
+				</ul>
+		</div>
+		</div>
+			</div>
+		
+		<div class="NO4">
+			<div class="N4top">
+				<ul>
+					<li><a href="#"><h2>全部蔬果</h2></a></li>
+					<li><a href="#"><h2>时令水果</h2></a></li>
+					<li><a href="#"><h2>新鲜蔬菜</h2></a></li>
+				</ul>
+			</div>
+			<div class="N4bottom">
+				<ul>
+					<li class="N4li">
+						<ul>
+							<li><a href="#"><img src="img/E.jpg"/></a></li>
+							<li><a href="#"><img src="img/F.jpg"/></a></li>
+							<li><a href="#"><img src="img/G.jpg"/></a></li>
+							<li><a href="#"><img src="img/H.jpg"/></a></li>
+						</ul>
+					</li>
+					<li class="N4li">
+						<ul>
+							<li><a href="#"><img src="img/I.jpg"/></a></li>
+							<li><a href="#"><img src="img/J.jpg"/></a></li>
+							<li><a href="#"><img src="img/K.jpg"/></a></li>
+							<li><a href="#"><img src="img/L.jpg"/></a></li>
+						</ul>
+					</li>
+					<li class="N4li">
+					<ul>
+						<li><a href="#"><img src="img/M.jpg"/></a></li>
+						<li><a href="#"><img src="img/N.jpg"/></a></li>
+						<li><a href="#"><img src="img/O.jpg"/></a></li>
+						<li><a href="#"><img src="img/P.jpg"/></a></li>
+					</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="NO5">
+		<h1 style="font-family:'微软雅黑';color: limegreen;display: inline;margin-left: 20%;">Vegetables&nbsp;&nbsp;Fruits&nbsp;&nbsp;<font style="color: white;">Design</font></h1>
+		<br />
+		<img src="img/X.png" style="width: 3%;margin-left: 20%;"/><h1 style="color: white;display: inline;position: relative;top: -10px;left: 1%;">132-1318-6279</h1>
+		<img src="img/Y.png"style="display: block;float: right;width: 10%;margin-right: 20%;"/>
+		</div>
+	</body>
+	<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+//		$().ready(function(){
+	      //导航
+	      $(function(){
+			$(".N1bottom ul li").mouseover(function(){
+				$(this).addClass("selected");
+			})
+			$(".N1bottom ul li").mouseout(function(){
+				$(this).removeClass("selected");
+				$(this).siblings().removeClass("selected");
+			})
+			//二级菜单栏
+			$(".li1").mouseover(function(){
+				$(this).addClass("B");
+				$(this).siblings().removeClass("B");
+				$(this).children().show();
+			})
+			$(".li1").mouseout(function(){
+				$(".ul2").hide();
+			})
+			//下拉框
+			var i=0;
+			$(".N1li1").click(function(){
+				i++;
+				if(i%2==1){
+				$(".N2left").addClass("A");
+				}else{$(".N2left").removeClass("A");}
+			})
+			//轮播器
+			$(".N2center ul li").mouseover(function(){
+				var imgs=new Array("img/1.jpg","img/2.jpg");
+				var i=$(this).index();
+				if(i==imgs.length){
+				i=0;}
+				$(".N2center img").attr("src",imgs[i]);
+			})
+			t=setTimeout(function(){
+			$(".N2center ul li").mouseover()	
+			},2000);
+			//当鼠标移到图片上时，清除轮播器
+			$(".N2center img").mouseover(function(){
+				clearTimeout(t);
+			})
+			//当鼠标移出图片时，运行轮播器
+			$(".N2center img").mouseout(function(){
+				setTimeout(function(){
+					$(".N2center ul li").mouseover()
+				},2000);
+			})
+			//双图层
+			$(".N3 ul").mouseover(function(){
+				$(this).find(".l2").show();
+			})
+				
+			$(".N3 ul").mouseout(function(){
+				$(this).find(".l2").hide();
+			})
+			//2个ul
+			$(".N4top ul li").hover(function(){
+				var i =$(this).index();
+				$(".N4li").eq(i).show();
+				$(".N4li").eq(i).siblings().hide();
+			})
+			//左右移动
+			$(".N3 ul li").mouseout(function(){
+				 $(".N3 ul li").addClass("C");
+			})
+			tt=setTimeout(function(){
+				$(".N3 ul li").mouseout();
+			},1000);
+			//当鼠标移到图片上时，停止移动
+			$(".N3 ul li").mouseover(function(){
+                 clearTimeout(tt);
+                 $(".N3 ul").removeClass("C");
+			})
+		})
+	</script>
+	<script src="js/wow.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+       //new WOW.init();
+        new WOW().init();
+	</script>
+</html>

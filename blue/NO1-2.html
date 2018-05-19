@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+        <link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		
+        <style type="text/css">
+        	div{
+        		margin: 0 auto;
+        		margin-bottom: 50px;
+        	}
+        	a:hover{
+        		text-decoration: none;
+        	}
+        	h3{
+        		color: cornflowerblue;
+        		text-align: center;
+        		font-weight: bold;
+        	}
+        	h3 a:hover{
+        		color: dodgerblue;
+        	}
+        	p{
+        		color:gray;
+        		text-align: center;
+        		font-size: 1.2em;
+        	}
+        	
+        	.NO1{
+        		width: 100%;
+        		height: 50px;
+        	}
+        	
+        	.NO1-li-1{
+        		width: 15%;
+        		height: 50px;
+        		margin:5px 5% 0px 5%;
+        	}
+        	.NO1-li-2{
+                 width: 10%;
+                 height: 50px;
+                 text-align: center;
+                 margin-top: 8px;
+        	}
+           .NO1-li-2 a{
+            	font-size: 16px;
+            	color: white;
+            	background-color: dodgerblue;
+            }
+        	.NO1-li-2 a:hover{
+        		color: dodgerblue;
+        	}
+        	.NO2{
+        		width: 45%;
+        		height: 350px;
+
+        	}
+        	.NO3{
+        		width: 60%;
+        		height: 400px;
+        	}
+        	.NO3-5{
+        		width: 19%;
+        		height: 300px;
+        		margin-left: 1%;
+        		float: left;
+        		padding-top: 20px;
+        		text-align: center;
+        	}
+        	.NO3-5 a{
+        		width: 19%;
+        		height: 350px;
+        	}
+        	.NO3-5 ul{
+        		width: 100%;
+        	}
+        	.NO3-5:hover{
+        		text-decoration: none;
+        		color: dodgerblue;
+        		border:1px solid lightgray;
+        		border-radius: 9%;
+        	}
+        	.NO3-5 h3{
+        		color: gray;
+        	}
+        .NO3-5 img{
+        	width: 80%;
+        }
+        .NO3-5 ul{
+        }
+        .NO3-5 ul li{
+        	list-style-type: none;
+        	color: cornflowerblue;
+        }
+        	.NO4{
+        		width: 50%;
+        		height: 350px;
+        	}
+        	.NO4left{
+        		width: 48%;
+        		height: 350px;
+        		float: left;
+        		padding-top: 30px;
+        	}
+        	.NO4right{
+        		float: right;
+        		width: 50%;
+        		height: 350px;
+        	}
+        	.NO5{
+        		width: 50%;
+        		height: 280px;
+        	}
+        	.NO5left{
+        		float: left;
+        		width: 45%;
+        		height: 280px;
+
+        	}
+        	.NO5right{
+        		float: right;
+        		width: 50%;
+        		height: 280px;
+        	}
+        	.NO6{
+        		width: 70%;
+        		height: 500px;
+        		
+        	}
+        	.NO6-8{
+        		width: 22%;
+        		height: 200px;
+        		margin-right: 3%;
+        		float: left;
+        		text-align: center;
+        		border: 1px solid dodgerblue;
+        	}
+        	.NO6-8 a img{
+        		margin-bottom: 12px;
+        	}
+        	.btn{
+        		color: white;
+        		font-weight: bolder;
+        		background-color: dodgerblue;
+        		border: 1px solid dodgerblue;
+        	}
+        	.btn:hover{
+        		color:dodgerblue;
+        		background-color: white;
+        	}
+        	.NO7{
+        		width: 60%;
+        		height: 300px;
+        	}
+        	.NO7left{
+        		width: 50%;
+        		height: 300px;
+        		float: left;
+        		text-align: center;
+        		padding: 0px 10px;
+        	}
+        	.NO7right{
+        		width: 45%;
+        		height: 300px;
+        		float: right;
+        	}
+        	.NO8{
+        		width: 60%;
+        		height: 500px;
+        	}
+        	.NO8left{
+        		width: 45%;
+        		height: 300px;
+        		float: left;
+        	}
+        	.NO8right{
+        		width: 50%;
+        		height: 300px;
+        		float: right;
+        		padding: 0px 10px;
+        	}
+        	.NO8bottom{
+                width: 100%;
+                height: 150px;
+                clear: both;
+                background-color:#009fd9;
+        	}
+        	.NO8bottom p{
+        		color:white;
+        		position: relative;
+        		top: -80px;
+        		
+        	}
+        </style>
+	</head>
+	<body>
+		
+       <div class="NO1">
+       <ul class="nav nav-pills navbar-fixed-top" style="background-color: lightgray;">
+       	<li class="NO1-li-1"><img src="img/logo.png" style="width: 100%;height: 50px;"/></li>
+       	<li class="NO1-li-2"><a href="#NO2">首页</a></li>
+       	<li class="NO1-li-2"><a href="#NO3">咨询中心</a></li>
+       	<li class="NO1-li-2"><a href="#NO4">网络教育</a></li>
+       	<li class="NO1-li-2"><a href="#NO5">成人教育</a></li>
+       	<li class="NO1-li-2"><a href="#NO6">最新课堂</a></li>
+       	<li class="NO1-li-2"><a href="#NO7">微信平台</a></li>
+       	<li class="NO1-li-2"><a href="#NO8">联系我们</a></li>
+       </ul>
+       </div>
+       
+       <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+       <div class="NO2">
+       	<h3 style="color: dodgerblue;text-align: center;padding-top: 10px;"><a name="NO2">来报名等于拿证</a></h3>
+       	<p style="color: gray;text-align: center;margin-top: -20px;">_________________________</p>
+       	<p>尽管你足够优秀，但不可否认，学历是一条捷径，哪怕仅仅是锦上添花。一纸证书，比我们所认为的更重要</p>
+       	<a href="#"><img src="img/xueli.png" style="width: 100%;height: 220px;text-align: center;"/></a>
+       </div>
+       </div>
+       
+       <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+       <div class="NO3">
+       	<h3 style="color: dodgerblue;text-align: center;padding-top: 10px;"><a name="NO3">咨询中心</a></h3>
+       	<p>鲁班教育为您收集各类最新资料，考辅资讯一网打尽</p>
+       	<div class="NO3-5">
+       		<a href="#">
+       			<img src="img/xmzx1b.png" class="img-circle"/>
+       			<h3>一级建造师</h3>
+       			<ul >
+       				<li>考试简介</li>
+       				<li>报考条件</li>
+       				<li>题目类型</li>
+       				<li>合格标准</li>
+       			</ul>
+       		</a>
+       	</div>
+       	<div class="NO3-5">
+       		<a href="#">
+       			<img src="img/xmzx2b.png" class="img-circle"/>
+       			<h3>二级建造师</h3>
+       			<ul>
+       				<li>考试时间</li>
+       				<li>免考条件</li>
+       				<li>考试科目</li>
+       				<li>合格标准</li>
+       			</ul>
+       		</a>
+       	</div>
+       	<div class="NO3-5">
+       		<a href="#">
+       			<img src="img/xmzx3b.png" class="img-circle"/>
+       			<h3>消防工程师</h3>
+       			<ul>
+       				<li>报考条件</li>
+       				<li>解题思路</li>
+       				<li>通过率与含金量</li>
+       				<li>怪靠前景</li>
+       			</ul>
+       		</a>
+       	</div>
+       	<div class="NO3-5">
+       		<a href="#">
+       			<img src="img/xmzx4b.png" class="img-circle"/>
+       			<h3>造价工程师</h3>
+       			<ul>
+       				<li>证书注册</li>
+       				<li>成绩管理</li>
+       				<li>就业待遇</li>
+       				<li>怪靠前景</li>
+       			</ul>
+       		</a>
+       	</div>
+       	<div class="NO3-5">
+       		<a href="#">
+       			<img src="img/xmzx5b.png" class="img-circle"/>
+       			<h3>其他考辅</h3>
+       			<ul>
+       				<li>考试政策</li>
+       				<li>名师答疑</li>
+       				<li>考友经验分享</li>
+       				<li>资源下载</li>
+       			</ul>
+       		</a>
+       	</div>
+       </div>
+       </div>
+       
+
+       <div class="NO4">
+       	
+       <div class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+       	<div class="NO4left">
+       		<h3><a name="NO4">网络教育</a></h3>
+       		<p>时间段，毕业易，在职人员学习进修的首选，每年春，秋两次报名，学习时间约2.5-3年</p>
+       		<p>√211院校开设</p>
+       		<p>√每年学制固定</p>
+       		<p>√一年两次入学</p>
+       		<p>√网络教育为主</p>
+       	</div>
+       	</div>
+       	
+       	<div class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s">
+       	<div class="NO4right">
+       		<img src="img/wangjiao.png" style="width: 100%;height: 350px;"/>
+       	</div>
+       	</div>
+       	
+       </div>
+       <div class="NO5">
+       	
+       	<div class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+       	<div class="NO5left"><img src="img/chengjiao1.png" style="width: 100%;height: 250px;"/></div>
+       	</div>
+       	<div class="wow fadeInRight" data-wow-duration="1s">
+       	<div class="NO5right">
+       		<h3><a name="NO5">成人教育</a></h3>
+       		<p>每年10月份国家统一考试，统一填写志愿，取得学校录取通知书后，第二年3月份办理入学手续，学习时间约2.5-3年</p>
+       		<p>国家认可</p>
+       		<p>取证稳快</p>
+       		<p>免试入学</p>
+       		<p>全程托管</p>
+       	</div>
+       	</div>
+       </div>
+       
+       <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+       <div class="NO6">
+       	<h3><a name="NO6">最新课堂</a></h3>
+       	<p>鲁班教育精选优秀师资，帮助学员精准提升</p>
+        <div class="NO6-8"><a href=""><img src="img/course5.gif" style="width: 100%;height: 140px;"/></a>
+        <a href="#" class="btn" >加入学习</a> </div>
+        <div class="NO6-8"><a href=""><img src="img/course6.gif.jpg" style="width: 100%;height: 140px;"/></a>
+        <a href="#" class="btn" >加入学习</a></div>
+        <div class="NO6-8"><a href=""><img src="img/course7.gif" style="width: 100%;height: 140px;"/></a><br />
+        <a href="#" class="btn" >加入学习</a></div>
+        <div class="NO6-8"><a href=""><img src="img/course7.gif" style="width: 100%;height: 140px;"/></a><br />
+        <a href="#" class="btn" >加入学习</a></div>
+        <div class="NO6-8"><a href=""><img src="img/course7.gif" style="width: 100%;height: 140px;"/></a><br />
+        <a href="#" class="btn" >加入学习</a></div>
+        <div class="NO6-8"><a href=""><img src="img/course10.gif" style="width: 100%;height: 140px;"/></a><br />
+        <a href="#" class="btn" >加入学习</a></div>
+        <div class="NO6-8"><a href=""><img src="img/course9.gif" style="width: 100%;height: 140px;"/></a><br />
+        <a href="#" class="btn" >加入学习</a></div>
+        <div class="NO6-8"><a href=""><img src="img/course12.gif" style="width: 100%;height: 140px;"/></a><br />
+        <a href="#" class="btn" >加入学习</a></div>
+       </div>
+       </div>
+       
+       <div class="NO7">
+       	
+       <div class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+       	<div class="NO7left">
+       		<h3><a name="NO7">鲁班教育微信平台</a></h3>
+       			<p>欢迎关注河南鲁班教育！我们主要从事以下业务： 1、注册消防工程师，一级建造师，
+       				二级建造师，造价工程师，监理工程师的代报名和培训。 2、成人高招，网络教育，
+       				国家开放大学（电大）　大专，本科学历提升，中专证的办理。 3、初级职称（助理工程师）、
+       				中级职称（工程师）的代办。 4、八大员，电工证，特殊工种，技工证、
+       				三类人员（ＡＢＣ）、专监证办理。 5、人力资源，劳务输出。</p>
+       	</div>
+       	</div>
+       	
+       	<div class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s">
+       	<div class="NO7right"><img src="img/WeChat1.png" style="width: 100%;height: 220px;"/></div>
+       </div>
+       	</div>
+       
+       <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+       <div class="NO8">
+       	<div class="NO8left">
+       		<img src="img/dizhi.png" style="width: 100%;height: 300px;"/>
+       	</div>
+       	<div class="NO8right">
+       	<h3><a name="NO8">联系我们</a></h3>
+       		 <p>鲁班教育以企业内训为核心业务，目前已建立起建筑类、医疗类、教师类、 消防类执业资格考前辅导为核心的培训体系，特别是在注册建造师、消防工程师、安全工程师、教师资格证的考试辅导方面，具备有独特优势。
+       同时，鲁班教育积极整合社会资源，与国内一流会计师事务所、 税务师事务所、律师事务所紧密合作，为企业提供全方位的整体解决方案， 涉及企业法务、税务、财务审计、企业战略管理、上市辅导、企业管理咨询等项目。
+   电话：0371-86588655
+   地址:河南省郑州市管城区紫荆山路与陇海路交叉口东北角方圆创世B座1501室</p></div>
+       	<div class="NO8bottom">
+       		
+<!-- footer -->
+<div class="wave-box">
+
+	<div class="marquee-box marquee-up" id="marquee-box">
+		<div class="marquee">
+			<div class="wave-list-box" id="wave-list-box1">
+				<ul>
+					<li><img height="60" alt="波浪" src="img/wave_02.png"></li>
+				</ul>
+			</div>
+			<div class="wave-list-box" id="wave-list-box2">
+				<ul>
+					<li><img height="60" alt="波浪" src="img/wave_02.png"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="marquee-box" id="marquee-box3">
+		<div class="marquee">
+			<div class="wave-list-box" id="wave-list-box4">
+				<ul>
+					<li><img height="60" alt="波浪" src="img/wave_01.png"></li>
+				</ul>
+			</div>
+			<div class="wave-list-box" id="wave-list-box5">
+				<ul>
+					<li><img height="60" alt="波浪" src="img/wave_01.png"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>
+       		
+       		
+       		<p>0371-86588655</p>
+<p>河南省郑州市管城区紫荆山路与陇海路交叉口东北角方圆创世B座1501室</p>
+<p>版权所有 © 1998-2017 鲁班教育河南分校</p></div>
+       </div>
+       </div>
+       
+       <script src="js/wow.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/script.js"></script>
+       <script type="text/javascript">
+       	var wow=new WOW({
+//     		boxClass:'wow fadeInUp',
+//     		animateClass:'animated',
+       		mobile:true,
+       		live:true
+       	});
+       	wow.init();
+        // new WOW().init();
+       </script>
+	</body>
+</html>
