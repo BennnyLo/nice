@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd
+">
+
+	<!-- 扫描dao,service所在的包，注解方式的IOC -->
+	<context:component-scan base-package="com.news.dao,com.news.service,com.item.dao,com.users.dao"></context:component-scan>
+
+
+<!-- 数据库的连接信息为了便于管理，通常不写在xml文件中，写在properties文件中 -->
+<!-- 读取properties文件 -->
+<context:property-placeholder location="classpath:database.properties"/>
+
+<!-- hibernate与Spring整合 数据库的连接和sessionFactory的创建交由spring管理 -->
+	<!-- 创建数据源 使用dbcp-->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${driver}"></property>
+		<property name="url" value="${url}"></property>
+		<property name="username" value="${name}"></property>
+		<property name="password" value="${password}"></property>
+	</bean>
+	
+	<!-- 创建 sqlSessionFactory-->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- hibernate的参数配置 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					${dialect}
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+			</props>
+		</property>
+		<!-- 注解方式的hibernate，扫描实体类所在的包 -->
+		<property name="packagesToScan" value="com.news.entity"></property>
+	</bean>
+
+	<!-- 定制事务管理器 -->
+	<bean  id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<!-- 事务注解驱动 -->
+	<tx:annotation-driven></tx:annotation-driven>
+	<!-- 配置验证码的Action -->
+	<bean id="checkImgAction" class="com.news.action.CheckImgAction" scope="prototype">
+	</bean>
+	
+	<bean id="loggerAspect" class="com.news.util.LoggerAspect"></bean>
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
+</beans>
+

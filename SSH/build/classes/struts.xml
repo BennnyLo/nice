@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+		
+	<package name="default" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor name="longinIntercept" class="com.news.intercept.LonginIntercept"></interceptor>
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="longinIntercept"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-action-ref name="defaultAction"></default-action-ref>
+		
+		<global-results>
+			<result name="error">/error.jsp</result>
+			<result name="login1">/tolongin.jsp</result>
+		</global-results>
+		<!-- 验证码的Action -->  
+        <action name="checkImg" class="checkImgAction"></action>  
+		<action name="defaultAction">
+			<result>/404.jsp</result>
+		</action>
+		
+		<action name="News*" class="com.news.action.NewsAction" method="{1}">
+			<interceptor-ref name="myStack"></interceptor-ref>
+			<result name="querynews">page/newslist.jsp</result>
+			<result name="fuzzyquerynews">page/newslist.jsp</result>
+			<result name="queryitem">page/newsadd.jsp</result>
+			<result name="addnews" type="redirectAction">Newsquerynews</result>
+			<result name="deletenews" type="redirectAction">Newsquerynews</result>
+			<result name="querybynewsId">page/newsedit.jsp</result>
+			<result name="updatenews" type="redirectAction">Newsquerynews</result>
+			<result name="queryallitem">page/itemlist.jsp</result>
+			<result name="fuzzyqueryitem">page/itemlist.jsp</result>
+			<result name="additem" type="redirectAction">Newsqueryallitem</result>
+			<result name="deleteitem" type="redirectAction">Newsqueryallitem</result>
+			<result name="deleteitemerror">Newsqueryallitem</result>
+			<result name="querybyitemid">page/itemedit.jsp</result>
+			<result name="updateitem" type="redirectAction">Newsqueryallitem</result>
+			<result name="queryallusers">page/userlist.jsp</result>
+			<result name="fuzzyqueryusers">page/userlist.jsp</result>
+			<result name="addusers" type="redirectAction">Newsqueryallusers</result>
+			<result name="deleteusers" type="redirectAction">Newsqueryallusers</result>
+			<result name="querybyusersid">page/useredit.jsp</result>
+			<result name="updateusers" type="redirectAction">Newsqueryallusers</result>
+			<allowed-methods>querynews,addnews,queryitem,deletenews,querybynewsId,updatenews,
+			queryallitem,additem,deleteitem,querybyitemid,updateitem,queryallusers,addusers,
+			deleteusers,querybyusersid,updateusers,fuzzyquerynews,fuzzyqueryitem,fuzzyqueryusers</allowed-methods>
+		</action>
+		<action name="Users*" class="com.news.action.loginAction" method="{1}">
+			<result name="login" type="redirect">index.jsp</result>
+			<result name="loginerror">login.jsp</result>
+			<result name="logout">login.jsp</result>
+			<allowed-methods>login,logout</allowed-methods>
+		</action>
+		<action name="App*" class="com.news.action.AppAction" method="{1}">
+			<result name="qianduan1">/qianduan/main.jsp</result>
+			<result name="qianduan2">/qianduan/news_content.jsp</result>
+			<allowed-methods>qianduan1,qianduan2</allowed-methods>
+		</action>
+	</package>
+	
+</struts>
+
+
